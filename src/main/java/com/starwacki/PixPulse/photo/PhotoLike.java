@@ -3,25 +3,18 @@ package com.starwacki.PixPulse.photo;
 import jakarta.persistence.*;
 
 /**
- * Created by Szymon Tarwacki 18.03.2024
+ * Created by Szymon Tarwacki 01.04.2024
  */
 @Entity
-class PhotoComment {
+class PhotoLike {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String comment;
-
-    private int likes;
-
     @ManyToOne
     @JoinColumn(name = "user_id")
     private PhotoUser user;
 
-    @ManyToOne
-    @JoinColumn(name = "photo_id")
-    private Photo photo;
 
 }

@@ -24,5 +24,8 @@ class PhotoUser {
     private Set<Photo> photos = new HashSet<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<Photo> comments = new HashSet<>();
+    private Set<PhotoComment> comments = new HashSet<>();
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private Set<PhotoLike> likes = new HashSet<>();
 }
