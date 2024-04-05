@@ -1,9 +1,5 @@
 package com.starwacki.PixPulse.photo;
 
-
-/**
- * Created by Szymon Tarwacki 01.04.2024
- */
 enum PhotoCategory {
     ARCHITECTURE,
     ANIMAL,

@@ -1,22 +1,17 @@
 package com.starwacki.PixPulse.photo;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by Szymon Tarwacki 18.03.2024
- */
 @Entity
 @Getter(AccessLevel.PACKAGE)
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
 @AllArgsConstructor(access = AccessLevel.PACKAGE)
+@ToString
 class Photo {
 
     @Id
@@ -29,6 +24,7 @@ class Photo {
 
     private int likes;
 
+    @Enumerated(EnumType.STRING)
     private PhotoCategory category;
 
     @ManyToOne

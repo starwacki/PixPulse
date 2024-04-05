@@ -2,9 +2,6 @@ package com.starwacki.PixPulse.photo;
 
 import jakarta.persistence.*;
 
-/**
- * Created by Szymon Tarwacki 18.03.2024
- */
 @Entity
 class PhotoComment {
 

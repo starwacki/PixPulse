@@ -9,9 +9,7 @@ import java.util.Set;
  * PhotoUser should be only use to create
  * relations in database between other entities.
  * PhotoUser is mapped to same table in database like user.
- * Created by Szymon Tarwacki 18.03.2024
  */
-
 @Entity
 @Table(name = "app_user")
 class PhotoUser {

@@ -4,10 +4,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import java.util.Set;
 
-/**
- * Created by Szymon Tarwacki 01.04.2024
- */
-
 @RestController
 @RequestMapping("api/v1/photo")
 @AllArgsConstructor
