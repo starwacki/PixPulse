@@ -1,8 +1,9 @@
 package com.starwacki.PixPulse.photo;
 
-
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
+
+import java.util.List;
 
 /**
  * Query repository can't be used to another operations than read,
@@ -10,8 +11,15 @@ import org.springframework.data.repository.Repository;
  */
 interface PhotoCommentQueryRepository extends Repository<PhotoComment,Long> {
 
-    @Query("SELECT NEW com.starwacki.PixPulse.photo.PhotoCommentDTO( pc.user.username, pc.comment, pc.likes ) " +
+    @Query("SELECT NEW com.starwacki.PixPulse.photo.PhotoCommentDTO(pc.user.username,pc.comment,pc.likes) " +
             "FROM PhotoComment pc " +
-            "WHERE pc.photo.id = :id")
-    PhotoDTO selectPhotoById(long id);
+            "WHERE pc.id = :id")
+    PhotoCommentDTO selectCommentById(long id);
+
+
+    @Query("SELECT NEW com.starwacki.PixPulse.photo.PhotoCommentDTO(pc.user.username,pc.comment,pc.likes) " +
+            "FROM PhotoComment pc " +
+            "WHERE pc.photo.id = :photoId")
+    List<PhotoCommentDTO> selectAllPhotoComments(long photoId);
+
 }

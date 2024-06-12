@@ -1,8 +1,10 @@
 package com.starwacki.PixPulse.photo;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 
 @Entity
+@Builder
 class PhotoComment {
 
     @Id

@@ -8,9 +8,11 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Setter(AccessLevel.PACKAGE)
 @Getter(AccessLevel.PACKAGE)
 @NoArgsConstructor(access = AccessLevel.PACKAGE)
 @AllArgsConstructor(access = AccessLevel.PACKAGE)
+@Builder
 @ToString
 class Photo {
 
@@ -33,5 +35,6 @@ class Photo {
 
     @OneToMany(mappedBy = "photo", cascade = CascadeType.ALL)
     private Set<Photo> comments = new HashSet<>();
+
 
 }

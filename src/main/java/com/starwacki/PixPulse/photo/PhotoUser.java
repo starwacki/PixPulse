@@ -1,6 +1,8 @@
 package com.starwacki.PixPulse.photo;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,6 +13,8 @@ import java.util.Set;
  * PhotoUser is mapped to same table in database like user.
  */
 @Entity
+@Getter
+@Setter
 @Table(name = "app_user")
 class PhotoUser {
     @Id
